@@ -1,6 +1,4 @@
-package HomeWork1;
-
-import java.io.Serializable;
+package home_work_1;
 
 public class HomeWork_2 {
     public static void main(String[] args) {
