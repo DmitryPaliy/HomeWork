@@ -39,12 +39,6 @@ public class HomeWork_5 {
         } else {
             System.out.println("Пора идти на работу");
         }
-        if (Objects.equals(yesNo2, "Да")) {
-            b = true;
-        }
-        if (Objects.equals(yesNo2, "Нет")) {
-            b = false;
-        }
     }
     public static boolean sleepIn(boolean weekday, boolean vacation) {
         if (!weekday || vacation) {
