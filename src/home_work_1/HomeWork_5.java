@@ -11,17 +11,17 @@ import java.util.Scanner;
 //	5.5 Если у нас отпуск или не рабочий день то мы можем спать дальше
 //	5.6 На основании ответа от метода sleepIn вывести сообщение можем спать дальше или пора идти на работу
 public class HomeWork_5 {
-    static boolean a;
+    static boolean conteiner;
     static boolean b;
     public static void main(String[] arg) {
         System.out.println("Сегодня рабочий день? Да/Нет?");
         Scanner ans = new Scanner(System.in);
         String yesNo1 = ans.nextLine();
         if (Objects.equals(yesNo1, "Да")) {
-            a = true;
+            conteiner = true;
         }
         if (Objects.equals(yesNo1, "Нет")) {
-            a = false;
+            conteiner = false;
             System.out.println("Можешь спать дальше");
             return;
         }
@@ -34,7 +34,7 @@ public class HomeWork_5 {
         if (Objects.equals(yesNo2, "Нет")) {
             b = false;
         }
-        if (sleepIn(a,b)) {
+        if (sleepIn(conteiner,b)) {
             System.out.println("Можешь спать дальше");
         } else {
             System.out.println("Пора идти на работу");
