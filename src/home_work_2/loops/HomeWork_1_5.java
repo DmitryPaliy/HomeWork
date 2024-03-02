@@ -201,7 +201,7 @@ public class HomeWork_1_5 {
         } while (!Character.isDigit(k));
 
         int a = Integer.parseInt(n);
-        int turnNum = 0;
+        int turnNum;
         while (a > 0) {
             turnNum = a % 10;
             a = a / 10;
