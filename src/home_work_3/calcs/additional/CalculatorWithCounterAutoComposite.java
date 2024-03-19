@@ -1,6 +1,6 @@
-package HomeWork_3.calcs.additional;
+package home_work_3.calcs.additional;
 
-import HomeWork_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_3.calcs.simple.CalculatorWithMathCopy;
 
 // 7. Создать класс CalculatorWithCounterAutoComposite.
 //	7.1 Все методы и поля, объявленные в данном классе НЕ статические - не имеют модификатор static.
@@ -17,10 +17,9 @@ import HomeWork_3.calcs.simple.CalculatorWithMathCopy;
 
 public class CalculatorWithCounterAutoComposite{
     private long count = 0;
-    private CalculatorWithMathCopy calcAutoComposite;
-    public CalculatorWithCounterAutoComposite(CalculatorWithMathCopy calcAutoComposite) {
-        this.calcAutoComposite = calcAutoComposite;
-    }
+
+    CalculatorWithMathCopy calcAutoComposite = new CalculatorWithMathCopy();
+
     public double divisionComposite(double dividend, double divisor) {
         count++;
         return calcAutoComposite.division(dividend, divisor);

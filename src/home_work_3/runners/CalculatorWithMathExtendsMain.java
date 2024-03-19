@@ -1,6 +1,6 @@
-package HomeWork_3.runners;
+package home_work_3.runners;
 
-import HomeWork_3.calcs.simple.CalculatorWithMathExtends;
+import home_work_3.calcs.simple.CalculatorWithMathExtends;
 
 // 4.4 Создать класс CalculatorWithMathExtendsMain в котором будет точка входа (main метод). В main методе требуется
 // создать экземпляр калькулятора и используя методы из данного экземпляра посчитать выражения из задания 1. Вывести

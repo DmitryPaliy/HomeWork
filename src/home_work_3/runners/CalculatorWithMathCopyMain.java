@@ -1,10 +1,10 @@
-package HomeWork_3.runners;
+package home_work_3.runners;
 // 3.3 Создать класс CalculatorWithMathCopyMain в котором будет точка входа (main метод). В main методе требуется
 // создать экземпляр калькулятора и используя методы из данного экземпляра посчитать выражения из задания 1.
 // (4.1 + 15 * 7 + (28 / 5) ^ 2)
 // Вывести в консоль результат.
 
-import HomeWork_3.calcs.simple.CalculatorWithOperator;
+import home_work_3.calcs.simple.CalculatorWithOperator;
 
 public class CalculatorWithMathCopyMain {
     public static void main(String[] args) {

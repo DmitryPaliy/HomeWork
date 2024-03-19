@@ -1,6 +1,6 @@
-package HomeWork_3.calcs.additional;
+package home_work_3.calcs.additional;
 
-import HomeWork_3.calcs.simple.CalculatorWithMathExtends;
+import home_work_3.calcs.simple.CalculatorWithMathExtends;
 
 // Создать класс CalculatorWithCounterClassic.
 //	5.1 Все методы, объявленные в данном классе НЕ статические - не имеют модификатор static.

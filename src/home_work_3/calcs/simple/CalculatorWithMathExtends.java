@@ -1,4 +1,4 @@
-package HomeWork_3.calcs.simple;
+package home_work_3.calcs.simple;
 // Создать класс CalculatorWithMathExtends.
 //	4.1 Все методы, объявленные в данном классе НЕ статические - не имеют модификатор static.
 //	4.2 Данный класс должен наследовать класс CalculatorWithOperator.

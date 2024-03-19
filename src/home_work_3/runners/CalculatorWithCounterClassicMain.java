@@ -1,6 +1,6 @@
-package HomeWork_3.runners;
+package home_work_3.runners;
 
-import HomeWork_3.calcs.additional.CalculatorWithCounterClassic;
+import home_work_3.calcs.additional.CalculatorWithCounterClassic;
 
 // 5.5 Создать класс CalculatorWithCounterClassicMain в котором будет точка входа (main метод). В main методе
 // требуется создать экземпляр калькулятора и используя методы из данного экземпляра посчитать выражения из

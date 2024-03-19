@@ -1,6 +1,6 @@
-package HomeWork_3.calcs.additional;
+package home_work_3.calcs.additional;
 
-import HomeWork_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_3.calcs.simple.CalculatorWithMathCopy;
 
 //Создать класс CalculatorWithCounterAutoAgregation.
 //	8.1 Все методы и поля, объявленные в данном классе НЕ статические - не имеют модификатор static.
@@ -20,7 +20,7 @@ import HomeWork_3.calcs.simple.CalculatorWithMathCopy;
 //	задания 1. Вывести в консоль результаты посчитанных выражений и результат метода getCountOperation().
 public class CalculatorWithCounterAutoAgregation {
     private long count;
-    private CalculatorWithMathCopy calcAgregation;
+    CalculatorWithMathCopy calcAgregation;
     public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy calcAgregation) {
         this.calcAgregation = calcAgregation;
     }

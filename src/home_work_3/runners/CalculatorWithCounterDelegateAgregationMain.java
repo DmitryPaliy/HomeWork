@@ -1,7 +1,7 @@
-package HomeWork_3.runners;
+package home_work_3.runners;
 
-import HomeWork_3.calcs.additional.CalculatorWithCounterAutoAgregation;
-import HomeWork_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_3.calcs.additional.CalculatorWithCounterAutoAgregation;
+import home_work_3.calcs.simple.CalculatorWithMathCopy;
 
 public class CalculatorWithCounterDelegateAgregationMain {
     public static void main(String[] args) {

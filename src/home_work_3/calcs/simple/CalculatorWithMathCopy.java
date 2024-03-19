@@ -1,4 +1,4 @@
-package HomeWork_3.calcs.simple;
+package home_work_3.calcs.simple;
 //3. Создать класс CalculatorWithMathCopy.
 //	3.1 Все методы, объявленные в данном классе НЕ статические - не имеют модификатор static.
 //	3.2 В классе должны присутствовать математические методы:
