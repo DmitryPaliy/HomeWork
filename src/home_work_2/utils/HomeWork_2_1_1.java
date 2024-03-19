@@ -24,19 +24,19 @@ public class HomeWork_2_1_1 {
             System.out.println("Введите размер массива");
             int size = scn.nextInt();
             System.out.println("Введите элементы массива");
-            int[] conteiner = new int[size];
+            int[] container = new int[size];
             for (int i = 0; i < size; i++) {
-                conteiner[i] = scn.nextInt();
+                container[i] = scn.nextInt();
             }
-            return conteiner;
+            return container;
         }
         public static int[] arrayRandom(int size, int maxValueExclusion) {
-            int[] conteiner = new int [size];
+            int[] container = new int [size];
             Random rnd = new Random();
             for (int i = 0; i < size; i++) {
-                conteiner[i] = rnd.nextInt(maxValueExclusion);
+                container[i] = rnd.nextInt(maxValueExclusion);
                 }
-            return conteiner;
+            return container;
         }
     }
 }

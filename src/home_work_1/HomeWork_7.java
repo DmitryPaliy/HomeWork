@@ -11,21 +11,27 @@ import java.util.Scanner;
 
     //public static void main(String[] args) {
         //Scanner console = new Scanner (System. in);
-       // System.out.println("Введите номер телефона с кодом в формате 8 ХХ ХХХ ХХ ХХ:");
-        //int phoneNum = console.nextInt(); //int чтобы не учитывались пробелы при вводе номера пользователем
-        //int[] numArray = new int[10];
+        //System.out.println("Введите десятизначный номер телефона:");
+        //int phoneNum = console.nextInt(); //принимаем целое число, чтобы игнорировать
+        // случайные пробелы, введённые пользователем
 
-        //createPhoneNumber(int[] phoneNum);
-        //System.out.println(createPhoneNumber(int[] numbers));
-
-
-    //public static String createPhoneNumber(int[] numbers) {
-        //numbers = new int [10];
-
-        //return string formatNum;
-
-
-
+        //по заданию преобразуем число в массив цифр
+        //String stringNum = Integer.toString(phoneNum);
+        //char[] charArray = stringNum.toCharArray();
+        //int[] numArray = new int[charArray.length];
+        //for (int i = 0; i < charArray.length; i++) {
+            //numArray[i] = Integer.parseInt(String.valueOf(charArray[i]));
         //}
-    //}
-//}
+       // System.out.println(createPhoneNumber(numArray));
+
+    //public static int[] createPhoneNumber(int[] a) {
+        //String[] formatPhoneNum = new String[14];
+        //for (int i = 1; i < 4; i++) {
+            //formatPhoneNum [i] = Integer.toString(a )
+        //}
+
+        //return formatPhoneNum;
+       // }
+
+
+
