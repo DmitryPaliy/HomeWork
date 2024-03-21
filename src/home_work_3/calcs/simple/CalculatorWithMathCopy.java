@@ -1,4 +1,7 @@
 package home_work_3.calcs.simple;
+
+import home_work_3.calcs.api.ICalculator;
+
 //3. Создать класс CalculatorWithMathCopy.
 //	3.1 Все методы, объявленные в данном классе НЕ статические - не имеют модификатор static.
 //	3.2 В классе должны присутствовать математические методы:
@@ -6,7 +9,7 @@ package home_work_3.calcs.simple;
 //		математические операции из CalculatorWithOperator.
 //		3.2.2 3 метода (Возведение в целую степень дробного положительного числа, Модуль числа, Корень из числа).
 //		Данные методы должны содержать в своём теле вызов библиотеки Math и возврат полученного результата.
-public class CalculatorWithMathCopy {
+public class CalculatorWithMathCopy implements ICalculator {
 
     public double division(double dividend, double divisor) {
         return dividend / divisor;

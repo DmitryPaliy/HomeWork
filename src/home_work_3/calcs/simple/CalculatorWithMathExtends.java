@@ -9,7 +9,9 @@ package home_work_3.calcs.simple;
 //		Данные методы должны ПЕРЕОПРЕДЕЛЯТЬ методы родительского класса (4.2) и должны содержать в своём теле вызов
 //		библиотеки Math и возврат полученного результата.
 
-public class CalculatorWithMathExtends extends CalculatorWithOperator {
+import home_work_3.calcs.api.ICalculator;
+
+public class CalculatorWithMathExtends extends CalculatorWithOperator implements ICalculator {
     @Override
     public double toPositive(double anyRealNum) {
         return  Math.abs(anyRealNum);

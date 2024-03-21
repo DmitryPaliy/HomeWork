@@ -1,5 +1,7 @@
 package home_work_3.runners;
-
+//8.7 Создать класс CalculatorWithCounterDelegateAgregationMain в котором будет точка входа (main метод). В main
+//	методе требуется создать экземпляр калькулятора и используя методы из данного экземпляра посчитать выражения из
+//	задания 1. Вывести в консоль результаты посчитанных выражений и результат метода getCountOperation().
 import home_work_3.calcs.additional.CalculatorWithCounterAutoAgregation;
 import home_work_3.calcs.simple.CalculatorWithMathCopy;
 

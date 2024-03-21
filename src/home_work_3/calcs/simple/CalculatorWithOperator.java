@@ -1,4 +1,7 @@
 package home_work_3.calcs.simple;
+
+import home_work_3.calcs.api.ICalculator;
+
 //2. Создать класс CalculatorWithOperator.
 //	2.1 Все методы, объявленные в данном классе НЕ статические - не имеют модификатор static.
 //	2.2 В классе должны присутствовать математические методы:
@@ -7,7 +10,7 @@ package home_work_3.calcs.simple;
 //		типом результата) при помощи ключевого слово return.
 //		2.2.2 3 метода (Возведение в целую степень дробного положительного числа, Модуль числа, Квадратный корень
 //		из числа).
-public class CalculatorWithOperator {
+public class CalculatorWithOperator implements ICalculator {
 
     /**
      * Метод выполняет деление двух вещественных чисел
