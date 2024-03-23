@@ -16,9 +16,9 @@ import home_work_3.calcs.simple.CalculatorWithMathCopy;
 //	калькулятора. При вызове данного метода счётчик учёта не увеличивается.
 
 public class CalculatorWithCounterAutoComposite{
-    private long count = 0;
-
     CalculatorWithMathCopy calcAutoComposite = new CalculatorWithMathCopy();
+
+    private long count = 0;
 
     public double divisionComposite(double dividend, double divisor) {
         count++;

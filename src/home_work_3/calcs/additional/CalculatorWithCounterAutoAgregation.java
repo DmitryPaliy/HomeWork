@@ -19,8 +19,8 @@ import home_work_3.calcs.simple.CalculatorWithMathCopy;
 //	методе требуется создать экземпляр калькулятора и используя методы из данного экземпляра посчитать выражения из
 //	задания 1. Вывести в консоль результаты посчитанных выражений и результат метода getCountOperation().
 public class CalculatorWithCounterAutoAgregation {
-    private long count;
     CalculatorWithMathCopy calcAgregation;
+    private long count;
     public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy calcAgregation) {
         this.calcAgregation = calcAgregation;
     }

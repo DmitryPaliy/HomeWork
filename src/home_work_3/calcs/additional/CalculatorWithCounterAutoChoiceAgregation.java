@@ -20,11 +20,10 @@ import home_work_3.calcs.simple.CalculatorWithOperator;
 //	использований данного калькулятора. При вызове данного метода счётчик учёта не увеличивается.
 
 public class CalculatorWithCounterAutoChoiceAgregation {
+    private CalculatorWithOperator calcOperator;
+    private CalculatorWithMathCopy calcCopy;
+    private CalculatorWithMathExtends calcExtends;
     public long count = 0;
-    CalculatorWithOperator calcOperator;
-    CalculatorWithMathCopy calcCopy;
-    CalculatorWithMathExtends calcExtends;
-
     public CalculatorWithCounterAutoChoiceAgregation(CalculatorWithOperator calcOperator) {
         this.calcOperator = calcOperator;
     }

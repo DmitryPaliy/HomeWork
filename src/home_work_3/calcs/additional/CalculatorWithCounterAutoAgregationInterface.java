@@ -13,8 +13,8 @@ import home_work_3.calcs.api.ICalculator;
 //	11.6 В классе должен быть метод long getCountOperation() который должен возвращать количество использований
 //	данного калькулятора. При вызове данного метода счётчик учёта не увеличивается.
 public class CalculatorWithCounterAutoAgregationInterface {
+    ICalculator iCalculator;
     private long count = 0;
-    public ICalculator iCalculator;
     public CalculatorWithCounterAutoAgregationInterface(ICalculator iCalculator) {
         this.iCalculator = iCalculator;
     }
