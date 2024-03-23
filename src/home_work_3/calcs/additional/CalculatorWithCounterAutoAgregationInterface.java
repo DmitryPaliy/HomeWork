@@ -18,32 +18,32 @@ public class CalculatorWithCounterAutoAgregationInterface {
     public CalculatorWithCounterAutoAgregationInterface(ICalculator iCalculator) {
         this.iCalculator = iCalculator;
     }
-        public double division ( double dividend, double divisor){
+        public double division(double dividend, double divisor) {
             count++;
             return iCalculator.division(dividend, divisor);
         }
-        public double multiplication ( double multiplicand, double multiplier){
+        public double multiplication(double multiplicand, double multiplier) {
             count++;
             return iCalculator.multiplication(multiplicand, multiplier);
 
         }
-        public double subtraction ( double minuend, double subtrahend){
+        public double subtraction(double minuend, double subtrahend) {
             count++;
             return iCalculator.subtraction(minuend, subtrahend);
         }
-        public double summation ( double summand1, double summand2){
+        public double summation(double summand1, double summand2) {
             count++;
             return iCalculator.summation(summand1, summand2);
         }
-        public double exponentation ( double base, int exponent){
+        public double exponentation(double base, int exponent) {
             count++;
             return iCalculator.exponentation(base, exponent);
         }
-        public double toPositive ( double anyRealNum){
+        public double toPositive(double anyRealNum) {
             count++;
             return iCalculator.toPositive(anyRealNum);
         }
-        public double squareRoot ( double underRoot){
+        public double squareRoot(double underRoot) {
             count++;
             return iCalculator.squareRoot(underRoot);
         }
