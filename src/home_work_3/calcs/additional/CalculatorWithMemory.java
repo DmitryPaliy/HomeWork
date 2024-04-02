@@ -42,7 +42,6 @@ public class CalculatorWithMemory {
     private ICalculator iCalculator;
     private double memory;
     private double saveNow;
-    private double givenSave;
     public CalculatorWithMemory(ICalculator iCalculator) {
         this.iCalculator = iCalculator;
     }
@@ -75,10 +74,10 @@ public class CalculatorWithMemory {
         return memory;
     }
     public void save() {
-        saveNow = memory;
+        saveNow = memory; //сохраняем текущее значение memory, чтобы применять memory не только сразу после записи
     }
     public double load() {
-        givenSave = saveNow;
+        double givenSave = saveNow;
         saveNow = 0;
         return givenSave;
     }
