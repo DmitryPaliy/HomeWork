@@ -1,6 +1,6 @@
 package home_work_1;
 
-public class HomeWork_3 {
+public class Task_3 {
     public static void main(String[] args) {
         double a = Math.abs(-10); //возвращает абсолютное значение числа
         System.out.println(a);

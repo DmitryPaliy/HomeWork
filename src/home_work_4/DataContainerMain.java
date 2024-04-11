@@ -5,7 +5,7 @@ import home_work_4.comparator.StringLengthComparator;
 
 public class DataContainerMain {
     public static void main(String[] args) {
-        DataContainer<String> container = new DataContainer<>(new String[0]); 
+        DataContainer<String> container = new DataContainer<>(new String[0]);
         int index1 = container.add("Привет");
         int index2 = container.add("Как дела");
         int index3 = container.add("Работаю");

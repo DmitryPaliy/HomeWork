@@ -2,7 +2,7 @@ package home_work_1;
 
 import java.util.Scanner;
 
-public class HomeWork_1_3 {
+public class Task_1_3 {
     public static void main(String[] args) {
         double a = 42.5;
         double b = 37.5;

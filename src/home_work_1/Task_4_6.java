@@ -2,7 +2,7 @@ package home_work_1;
 
 import java.util.Scanner;
 
-public class HomeWork_4_6 {
+public class Task_4_6 {
     public static void main(String[] args) {
         System.out.println("\t\t\t\t\t\t\t\t\t\t\tОпределение високосного года");
         Scanner num4 = new Scanner(System.in);
