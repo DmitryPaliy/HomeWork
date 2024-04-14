@@ -8,27 +8,37 @@ package home_work_1;
 public class Task_7 {
 
     public static void main(String[] args) {
-        int[] a = {5,7,6,4,9,8,5,4,2,3};
+        int[] a = {1,2,3,4,5,6,7,8,9,0};
         System.out.println(createPhoneNumber(a));
     }
     public static String createPhoneNumber(int[] arg) {
+        if (arg == null) {
+            return incorrect();
+        }
         if (arg.length != 10) {
-            return "Введены некорректные данные";
+            return incorrect();
+        }
+        for (int j : arg) {
+            if (j < 0) {
+                return incorrect();
+            }
         }
 
-        String formatPhoneNum = "(";
-        int [] phoneNumber = new int[10];
-        System.arraycopy(arg, 0, phoneNumber, 0, arg.length);
-        for (int i = 0; i < 10; i++) {
+        StringBuilder formatPhoneNum = new StringBuilder("(");
+        for (int i = 0; i < arg.length; i++) {
             if (i == 3) {
-                formatPhoneNum += ") ";
+                formatPhoneNum.append(") ");
             }
             if (i == 6) {
-                formatPhoneNum += "-";
+                formatPhoneNum.append("-");
             }
-            formatPhoneNum += Integer.toString(phoneNumber[i]);
+            formatPhoneNum.append(arg[i]);
         }
-        return formatPhoneNum;
+        return formatPhoneNum.toString();
+    }
+
+    public static String incorrect() {
+        return "Введены некорректные данные";
     }
 }
 
