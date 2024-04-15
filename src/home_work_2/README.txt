@@ -1,9 +1,8 @@
 
-loops/MultiplicationNumbers класс решает задание 1.1.1 и 1.1.2
-     /HomeWork_1_2 класс решает задание 1.2
-     /HomeWork_1_3 класс решает задание 1.3
+loops/MultiplicationNumbers класс решает задание 1.1.1, 1.1.2, 1.2
+     /ExpOfANumber класс решает задание 1.3
      /HomeWork_1_4 класс решает задание 1.4
-     /HomeWork_1_5 класс решает задание 1.5
+     /OperationOnNumbers класс решает задание 1.5
      /HomeWork_1_6 класс решает задание 1.6
 utils/HomeWork_2_1_1 класс решает задание 2.1.1
      /HomeWork_2_1_1_1 класс решает задание 2.1.1.1

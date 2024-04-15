@@ -11,94 +11,48 @@ package home_work_2.loops;
 import java.util.Random;
 import java.util.Scanner;
 
-public class HomeWork_1_5 {
-    public static void main(String[] args) {
-        String n;
-        int length;
-        char k = 0;
+public class OperationOnNumbers {
+    public static int maxDigit(int number) {
+        int maxDigit = 0;
+        int temp;
         do {
-            Scanner scn = new Scanner(System.in);
-            System.out.println("Введите целое положительное число");
-            n = scn.nextLine();
-            length = n.length();
-            for (int i = 0; i < length; i++) {
-                k = n.charAt(i);
-                if (!Character.isDigit(k)) {
-                    System.out.println("Введены некорректные данные");
-                    break;
-                }
+            temp = number % 10;
+            number = number / 10;
+            if (temp > maxDigit) {
+                maxDigit = temp;
             }
-        } while (!Character.isDigit(k));
-
-        int a = Integer.parseInt(n);
-        int m = a % 10;
-        int remainder = a / 10;
-        int maxDigit = m;
-        for (int i = 0; i < length; i++) {
-            int cmp = remainder % 10;
-            remainder = remainder / 10;
-            if (cmp > maxDigit) {
-                maxDigit = cmp;
-            }
-        }
-        System.out.println("(Задание 1.5.1) Наибольшая цифра: " + maxDigit);
-
-        definiteOfProbability1_5_2();
-        countEvenOdd_1_5_3();
-        countRowFibonacci_1_5_4();
-        showRowWithStep_1_5_5();
-        turnNumber_1_5_6();
+        } while (number != 0);
+        return maxDigit;
     }
 
-    private static void definiteOfProbability1_5_2() {
-         int quantityNum = 1000;
-         int[] array = new int [quantityNum];
+    public static int definiteOfProbability(int quantityNum, int maxValue) {
          Random rnd = new Random();
+         int temp;
          int count = 0;
          for (int i = 0; i < quantityNum; i++) {
-             array[i] = rnd.nextInt(100);
-             if (array[i] % 2 == 0) {
+             temp = rnd.nextInt(maxValue);
+             if (temp % 2 == 0) {
                  ++count;
              }
          }
-         int perHonest = 100 * count / quantityNum;
-         System.out.println("(Задание 1.5.2) Вероятность выпадения чётных чисел = " + perHonest);
+        return 100 * count / quantityNum;
      }
 
-    private static void countEvenOdd_1_5_3() {
-        String n;
-        int length;
-        char k = 0;
-        do {
-            Scanner scn = new Scanner(System.in);
-            System.out.println("Введите целое положительное число");
-            n = scn.nextLine();
-            length = n.length();
-            for (int i = 0; i < length; i++) {
-                k = n.charAt(i);
-                if (!Character.isDigit(k)) {
-                    System.out.println("Введены некорректные данные");
-                    break;
-                }
-            }
-        } while (!Character.isDigit(k));
-
-        int a = Integer.parseInt(n);
+    public static String countEvenOdd(int n) {
         int even = 0;
         int odd = 0;
-        for (int i = length - 1; i >= 0; i--) {
-            if (a % 2 == 0) {
+        do {
+            if (n % 2 == 0) {
                 ++even;
             } else {
                 ++odd;
             }
-            a = a /10;
-        }
-        System.out.println("Чётных цифр: " + even);
-        System.out.println("Нечётных цифр: " + odd);
+            n = n /10;
+        } while (n != 0);
+        return "Чётных цифр: " + even + "; " + "Нечётных цифр: " + odd;
     }
 
-    private static void countRowFibonacci_1_5_4() {
+    public static void countRowFibonacci() {
         Scanner scn = new Scanner(System.in);
         System.out.println("Введите количество элементов ряда Фибоначчи для вывода на экран:");
         int n = scn.nextInt();
@@ -119,7 +73,7 @@ public class HomeWork_1_5 {
         System.out.println(" ");
     }
 
-    private static void showRowWithStep_1_5_5() {
+    public static void showRowWithStep() {
         String naturalNum1;
         int length;
         char k = 0;
@@ -182,7 +136,7 @@ public class HomeWork_1_5 {
         System.out.println(" ");
     }
 
-    private static void turnNumber_1_5_6() {
+    public static void turnNumber_1_5_6() {
         String n;
         int length;
         char k = 0;
