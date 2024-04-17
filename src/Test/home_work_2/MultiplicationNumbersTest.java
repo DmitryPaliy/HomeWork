@@ -4,7 +4,7 @@ import home_work_2.loops.MultiplicationNumbers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class MultiplicationNumbersOfRowTest {
+public class MultiplicationNumbersTest {
     @Test
     public void checkResult() {
         int toNumber = 5;
