@@ -6,15 +6,17 @@ package home_work_2.loops;
 //		1.3.2 Пример: Ввели 7.5 и 2, должно получиться в консоли: 7.5 ^ 2 = 56.25
 
 public class ExpOfANumber {
-    public static String expNumber(double number, int degree) {
+    public static String expNumber(double number, int degree) throws ArithmeticException {
         if (degree < 0) {
-            return "Не умею возводить числа в отрицательную степень";
+            throw new ArithmeticException ("Не умею возводить числа в отрицательную степень");
         }
         double temp = 1;
         for (int i = 0; i < degree; i++) {
             temp *= number;
-            if (temp > Double.MAX_VALUE || temp < Double.MIN_VALUE) {
-                return "Не могу отобразить результат. Слишком большое или слишком маленькое число.";
+            if(temp == Double.POSITIVE_INFINITY ) {
+                throw new ArithmeticException("Слишком большое число");
+            } else if(temp == Double.NEGATIVE_INFINITY) {
+                throw new ArithmeticException("Слишком маленькое число");
             }
         }
         String result = String.format("%.2f", temp);
