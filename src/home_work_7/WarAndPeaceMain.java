@@ -1,5 +1,7 @@
 package home_work_7;
 
+import home_work_7.api.ISearchEngine;
+import home_work_7.decorator.SearchEngineIgnoringCase;
 import home_work_7.utils.EasySearch;
 import home_work_7.utils.TextEditor;
 import java.io.*;
@@ -32,15 +34,16 @@ public class WarAndPeaceMain {
 
     public static void main(String[] args) {
 
-        File file = new File("D:\\Java\\library\\War_and_peace.txt");
+        File file = new File("D:/Java/JD1/HomeWork/src/resources/War_and_peace.txt");
         if (!file.exists()) {
             System.out.println("Некорректно указан путь к файлу");
             return;
         }
 
-        String[] words = TextEditor.getOnlyWords(file).split(" ");
+        String text = TextEditor.getOnlyWords(file);
+        String[] words = text.split(" ");
         Set<String> stringSet = new HashSet<>(List.of(words));
-        System.out.println(stringSet.size()); //40316
+        System.out.println("В тексте используется " + stringSet.size() + " слов"); //40067
 
         Map <String, Integer> mapWords = new HashMap<>();
         for (String word : words) {
@@ -51,20 +54,24 @@ public class WarAndPeaceMain {
             }
         }
 
+        String times = " раз";
         List<Map.Entry<String, Integer>> listWords = new ArrayList<>(mapWords.entrySet());
         listWords.sort(Comparator.comparingInt(Map.Entry::getValue));
         Collections.reverse(listWords);
-        for (int i = 0; i <= 4; i++) {
-            System.out.println(listWords.get(i) + " раз, "); //и=13874 раз, в=6483 раз, не=5707 раз, что=4747 раз,
+        for (int i = 0; i < 4; i++) {
+            System.out.println(listWords.get(i) + times); //и=13875 раз, в=6490 раз, не=5717 раз, что=5040 раз,
         }
 
-        EasySearch easySearch = new EasySearch();
-        long countWar = easySearch.search(TextEditor.getOnlyWords(file), "война");
-        System.out.println("война - " + countWar + " раз, ");
-        long countAnd = easySearch.search(TextEditor.getOnlyWords(file), " и ");
-        System.out.println("и - " + countAnd + " раз, ");
-        long countPeace = easySearch.search(TextEditor.getOnlyWords(file), "мир");
-        System.out.println("мир - " + countPeace + " раз, ");
+        ISearchEngine easySearch = new EasySearch();
+        String[] searchingWords = {" война ", " и ", " мир "};
+        for (String s : searchingWords) {
+            System.out.println(s + easySearch.search(text, s) + times);// война-46, и-13875, мир-33
+        }
+
+        for (String str : searchingWords) {
+            ISearchEngine ignorCaseSearch = new SearchEngineIgnoringCase(easySearch);
+            System.out.println(str + ignorCaseSearch.search(text, str) + times);// война-51, и-14599, мир-33
+        }
     }
 }
 
