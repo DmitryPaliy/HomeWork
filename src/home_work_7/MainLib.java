@@ -21,20 +21,17 @@ public class MainLib {
 
         String folderPath = "D:/Java/JD1/HomeWork/src/home_work_7/library";
         Folder library = new Folder(folderPath);
-        library.choiceFolder();
+        library.listFolderFiles();
 
-        File file = library.choiceFile();
+        System.out.println("\nУкажите каталог для поиска:");
+        String subFolderPath = library.choiceFolder();
 
-        String searchingText;
-        do {
-            System.out.println("\nВведите текст для поиска или слово \"back\" для перехода к выбору файла:");
-            Scanner scanner = new Scanner(System.in);
-            searchingText = scanner.nextLine();
-            String text = TextEditor.getOnlyWords(file);
-            ISearchEngine search = new EasySearch();
-            System.out.println(searchingText + " " + search.search(text, searchingText));
-        } while (!searchingText.equals("back"));
+        System.out.println("\nВыберите файл для работы или введите" +
+                library.getBackToChoice() + "для перехода к выбору каталога:");
+        File file = library.choiceFile(subFolderPath);
 
-        
+        System.out.println("\nВведите текст для поиска или" +
+                library.getBackToChoice() + "для перехода к выбору файла:");
+        library.searchingText(file);
     }
 }

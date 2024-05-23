@@ -1,5 +1,7 @@
 package home_work_7.utils;
 
+import home_work_7.api.ISearchEngine;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.Objects;
@@ -7,7 +9,7 @@ import java.util.Scanner;
 
 public class Folder extends File{
 
-    private File folder;
+    private final File folder;
     private String folderPath;
 
     public Folder(String folderPath) {
@@ -16,48 +18,48 @@ public class Folder extends File{
         this.folder = new File(folderPath);
     }
 
-    public void setFolderPath(String folderPath) {
-        this.folderPath = folderPath;
-    }
-
     public void listFolderFiles() {
         Arrays.stream(Objects.requireNonNull(folder.list())).forEach(System.out::println);
     }
 
-    public String searchFolder(String nameFolder) {
-        for (String folderName : Objects.requireNonNull(folder.list())) {
-            if (nameFolder.equals(folderName)) {
-                setFolderPath(folderPath + "/" + folderName);
+    public String searchFile(String fileName) {
+        for (String name : Objects.requireNonNull(folder.list())) {
+            if (fileName.equals(name)) {
+                folderPath += "/" + name;
                 return folderPath;
             }
         }
         return "Имя каталога указано некорректно!";
     }
 
-    public Folder searchFile(File folder, String selectedFile) {
-        for (String fileName : Objects.requireNonNull(folder.list())) {
-            if (selectedFile.equals(fileName)) {
-                return new Folder(folderPath + "/" + fileName);
-            }
+    public String choiceFolder () {
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        Folder subFolder = new Folder(searchFile(userInput));
+        subFolder.listFolderFiles();
+        return subFolder.getAbsolutePath();
+    }
+    public File choiceFile (String folderPath) {
+        Scanner scanner = new Scanner(System.in);
+        String selectedFile = scanner.nextLine();
+        if (!selectedFile.equals(getBackToChoice())) {
+            return new File(folderPath + "/" + selectedFile);
         }
         return null;
     }
 
-    public void choiceFolder () {
-        listFolderFiles();
-        System.out.println("\nУкажите каталог для поиска:");
-        Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
-        Folder subFolder = new Folder(searchFolder(userInput));
-        subFolder.listFolderFiles();
+    public void searchingText(File file) {
+        String searchingText;
+        do {
+            Scanner scanner = new Scanner(System.in);
+            searchingText = scanner.nextLine();
+            String text = TextEditor.getOnlyWords(file);
+            ISearchEngine search = new EasySearch();
+            System.out.println(searchingText + " " + search.search(text, searchingText));
+        } while (!searchingText.equals(getBackToChoice()));
     }
-    public Folder choiceFile () {
-        System.out.println("\nВыберите файл для работы или введите слово \"back\" для перехода к выбору каталога:");
-        Scanner scanner = new Scanner(System.in);
-        String selectedFile = scanner.nextLine();
-        if (!selectedFile.equals("back")) {
-            return searchFile(folder, selectedFile);
-        }
-        return null;
+
+    public String getBackToChoice() {
+        return " back ";
     }
 }
