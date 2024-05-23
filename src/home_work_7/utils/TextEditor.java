@@ -8,6 +8,7 @@ public class TextEditor {
     public static String getOnlyWords(File file) {
 
         StringBuilder line = new StringBuilder();
+        line.append(" ");
 
         try (FileReader reader = new FileReader(file)) {
             int numberOfSimbol;

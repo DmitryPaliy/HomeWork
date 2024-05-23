@@ -3,6 +3,8 @@ package home_work_7.utils;
 // запрещено использовать регулярные выражения в любом виде, для любых задач. Данный класс ищет слова с учётом регистра.
 import home_work_7.api.ISearchEngine;
 
+import java.util.Scanner;
+
 public class EasySearch implements ISearchEngine {
 
     @Override

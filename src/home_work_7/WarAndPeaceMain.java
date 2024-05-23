@@ -34,7 +34,7 @@ public class WarAndPeaceMain {
 
     public static void main(String[] args) {
 
-        File file = new File("D:/Java/JD1/HomeWork/src/resources/War_and_peace.txt");
+        File file = new File("D:/Java/JD1/HomeWork/src/home_work_7/library/классика/War_and_peace_Tolstoi.txt");
         if (!file.exists()) {
             System.out.println("Некорректно указан путь к файлу");
             return;
@@ -68,8 +68,8 @@ public class WarAndPeaceMain {
             System.out.println(s + easySearch.search(text, s) + times);// война-46, и-13875, мир-33
         }
 
+        ISearchEngine ignorCaseSearch = new SearchEngineIgnoringCase(easySearch);
         for (String str : searchingWords) {
-            ISearchEngine ignorCaseSearch = new SearchEngineIgnoringCase(easySearch);
             System.out.println(str + ignorCaseSearch.search(text, str) + times);// война-51, и-14599, мир-33
         }
     }
